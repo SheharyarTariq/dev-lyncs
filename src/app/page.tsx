@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ScrollStory from "@/components/ScrollStory";
 import Marquee from "@/components/Marquee";
 import ClientLogos from "@/components/ClientLogos";
 import Services from "@/components/Services";
@@ -19,6 +20,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <ScrollStory />
       <Marquee />
       <ClientLogos />
       <Services />
