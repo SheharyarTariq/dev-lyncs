@@ -61,12 +61,12 @@ export default function Navbar() {
             className="flex items-center gap-2.5 pl-1 group"
             aria-label="AXIS Studio home"
           >
-            <div className="relative w-7 h-7">
-              <div className="absolute inset-0 rounded-full bg-teal-600 group-hover:scale-110 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]" />
-              <div className="absolute inset-[3px] rounded-full bg-cream-50 flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-teal-600" />
-              </div>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/favicon.svg"
+              alt="AXIS Studio"
+              className="w-7 h-7 group-hover:scale-110 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+            />
             <span className="font-display font-600 text-[15px] tracking-tight text-ink-950">
               AXIS Studio
             </span>

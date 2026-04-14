@@ -18,21 +18,27 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "LaundryFree — Expert Laundry & Dry Cleaning, Delivered",
+  title: "AXIS Studio — Creative Agency",
   description:
-    "Free collection & delivery. 48-hour turnaround. Trusted by 50,000+ households across the UK. Book your first collection today.",
+    "Full-service creative studio building brands, products, and campaigns for ambitious founders and forward-thinking companies.",
   keywords: [
-    "laundry service",
-    "dry cleaning",
-    "laundry delivery",
-    "wash and fold",
-    "UK laundry",
-    "ironing service",
+    "creative agency",
+    "brand identity",
+    "web design",
+    "UI UX design",
+    "digital marketing",
+    "Next.js development",
+    "UK agency",
   ],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
-    title: "LaundryFree — Expert Laundry & Dry Cleaning, Delivered",
+    title: "AXIS Studio — Creative Agency",
     description:
-      "Free collection & delivery. 48-hour turnaround. Trusted by 50,000+ households across the UK.",
+      "Full-service creative studio building brands, products, and campaigns for ambitious founders.",
     type: "website",
   },
 };
