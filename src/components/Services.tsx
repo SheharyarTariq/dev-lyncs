@@ -10,7 +10,7 @@ const services = [
     tagline: "Strategy & Design",
     description:
       "From naming and positioning to logo, typography, and brand guidelines — we build identities that are distinctive, durable, and designed to grow.",
-    price: "from £2,500",
+    price: "from $2,500",
     image: "https://picsum.photos/seed/brand-identity/640/480",
     accent: "teal",
     span: "lg:col-span-7",
@@ -21,7 +21,7 @@ const services = [
     tagline: "UI / UX",
     description:
       "Pixel-perfect interfaces backed by user research, prototyping, and design systems that scale across every screen.",
-    price: "from £3,500",
+    price: "from $3,500",
     image: "https://picsum.photos/seed/web-design/640/400",
     accent: "slate",
     span: "lg:col-span-5",
@@ -32,7 +32,7 @@ const services = [
     tagline: "Next.js & React",
     description:
       "Full-stack web builds using modern technologies — fast, accessible, and engineered to last well beyond launch day.",
-    price: "from £4,500",
+    price: "from $4,500",
     image: "https://picsum.photos/seed/development/640/400",
     accent: "slate",
     span: "lg:col-span-5",
@@ -43,7 +43,7 @@ const services = [
     tagline: "Growth & Campaigns",
     description:
       "SEO, paid media, email, and social — strategic campaigns that connect your brand with the right audiences and drive measurable results.",
-    price: "from £1,200/mo",
+    price: "from $1,200/mo",
     image: "https://picsum.photos/seed/digital-marketing/640/480",
     accent: "teal",
     span: "lg:col-span-7",

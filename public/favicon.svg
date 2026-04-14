@@ -1,61 +1,95 @@
-<svg viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Head + neck silhouette — right-facing profile -->
+<svg viewBox="0 0 200 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       HEAD SILHOUETTE — right-facing teal profile
+       (back of head left, face right, neck flows to bottom-right)
+       ══════════════════════════════════════════════════════════════════ -->
   <path
-    d="M22 84 L22 68
-       C14 64 10 55 10 44
-       C10 24 26 8 44 8
-       C58 8 70 16 75 28
-       C80 40 76 56 68 64
-       C62 70 56 73 52 75
-       L52 84 Z"
-    fill="#0c1210"
+    d="M 100 195
+       L 100 160
+       C 84 154 70 142 62 126
+       C 52 108 50 88 58 70
+       C 66 52 82 38 100 30
+       C 118 22 140 24 156 36
+       C 170 46 180 64 178 84
+       C 176 102 166 118 152 130
+       C 140 140 128 146 118 152
+       L 118 162
+       C 112 168 108 178 104 190
+       C 102 192 101 194 100 195 Z"
+    fill="#0d9488"
   />
 
-  <!-- Ear hint -->
-  <path
-    d="M10 42 C6 40 5 47 7 51 C9 55 13 53 12 49"
-    stroke="#0c1210" stroke-width="4" stroke-linecap="round" fill="none"
-  />
+  <!-- ── Flowing neck / data-stream swoops (bottom-left) ───────────── -->
+  <path d="M 88 164 C 78 172 66 180 56 188 C 50 194 46 200 44 206"
+        stroke="#0d9488" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M 80 158 C 70 164 60 170 52 176 C 46 180 42 184 40 188"
+        stroke="#0d9488" stroke-width="7"  stroke-linecap="round" fill="none"/>
+  <path d="M 72 153 C 62 158 54 162 46 166 C 40 170 36 172 34 174"
+        stroke="#0d9488" stroke-width="5"  stroke-linecap="round" fill="none"/>
 
-  <!-- Eye — small cream dot to suggest the face profile -->
-  <circle cx="62" cy="36" r="2.5" fill="#fdf8f0" opacity="0.55"/>
+  <!-- ══════════════════════════════════════════════════════════════════
+       BRAIN LOBES — same teal family, slightly deeper so they read
+       as separate on top of the head silhouette
+       ══════════════════════════════════════════════════════════════════ -->
+  <ellipse cx="92"  cy="80" rx="30" ry="25" fill="#0b8a7e"/>
+  <ellipse cx="132" cy="78" rx="24" ry="21" fill="#0b8a7e"/>
 
-  <!-- Brain — left hemisphere -->
-  <ellipse cx="33" cy="32" rx="11" ry="10" fill="#0d9488"/>
+  <!-- Centre groove (teal gap between hemispheres) -->
+  <path d="M 112 55 C 110 64 110 72 112 80 C 114 88 115 92 113 98"
+        stroke="#0d9488" stroke-width="4" fill="none" stroke-linecap="round"/>
 
-  <!-- Brain — right hemisphere -->
-  <ellipse cx="52" cy="32" rx="11" ry="10" fill="#0d9488"/>
+  <!-- Gyri folds — subtle white arcs suggesting brain surface -->
+  <path d="M 72 70 C 80 62 94 65 98 73"
+        stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65"/>
+  <path d="M 78 85 C 86 78 100 80 104 88"
+        stroke="white" stroke-width="2"   fill="none" stroke-linecap="round" opacity="0.45"/>
+  <path d="M 120 67 C 128 60 142 63 146 72"
+        stroke="white" stroke-width="2"   fill="none" stroke-linecap="round" opacity="0.45"/>
 
-  <!-- Brain centre divider (dark gap between hemispheres) -->
-  <rect x="41" y="22" width="3" height="20" fill="#0c1210"/>
+  <!-- ══════════════════════════════════════════════════════════════════
+       CIRCUIT TRACES — black PCB-style routes through the brain
+       ══════════════════════════════════════════════════════════════════ -->
 
-  <!-- Highlight folds on brain (darker teal, gives depth) -->
-  <ellipse cx="30" cy="30" rx="5" ry="4" fill="#0a7c72" opacity="0.6"/>
-  <ellipse cx="55" cy="30" rx="5" ry="4" fill="#0a7c72" opacity="0.6"/>
+  <!-- Vertical stem (main junction → down) -->
+  <line x1="96" y1="80"  x2="96" y2="108" stroke="#0c1210" stroke-width="3.5" stroke-linecap="round"/>
 
-  <!-- Circuit stems descending from brain -->
-  <line x1="28" y1="42" x2="28" y2="56" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
-  <line x1="42" y1="42" x2="42" y2="63" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
-  <line x1="57" y1="42" x2="57" y2="56" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Horizontal elbow at y=108 → left -->
+  <line x1="58" y1="108" x2="96" y2="108" stroke="#0c1210" stroke-width="3.5" stroke-linecap="round"/>
 
-  <!-- Horizontal bus connecting stems -->
-  <line x1="18" y1="56" x2="67" y2="56" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Left vertical leg up (y=108 → y=90) -->
+  <line x1="58" y1="90"  x2="58" y2="108" stroke="#0c1210" stroke-width="3.5" stroke-linecap="round"/>
 
-  <!-- Short vertical stubs at bus ends -->
-  <line x1="18" y1="50" x2="18" y2="56" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
-  <line x1="67" y1="50" x2="67" y2="56" stroke="#0d9488" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Far-left horizontal → exits head toward large dot -->
+  <line x1="22" y1="90"  x2="58" y2="90"  stroke="#0c1210" stroke-width="3.5" stroke-linecap="round"/>
 
-  <!-- Top branches rising from brain -->
-  <line x1="28" y1="22" x2="28" y2="15" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
-  <line x1="57" y1="22" x2="57" y2="15" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Secondary parallel horizontal branch at y=100 -->
+  <line x1="58" y1="100" x2="96" y2="100" stroke="#0c1210" stroke-width="2.5" stroke-linecap="round"/>
 
-  <!-- Endpoint dots — teal-400 (#2dd4bf) -->
-  <circle cx="18" cy="50" r="3.2" fill="#2dd4bf"/>
-  <circle cx="67" cy="50" r="3.2" fill="#2dd4bf"/>
-  <circle cx="42" cy="63" r="3.2" fill="#2dd4bf"/>
-  <circle cx="28" cy="15" r="2.8" fill="#2dd4bf"/>
-  <circle cx="57" cy="15" r="2.8" fill="#2dd4bf"/>
+  <!-- Right horizontal branch from main junction -->
+  <line x1="96" y1="84"  x2="140" y2="84" stroke="#0c1210" stroke-width="3"   stroke-linecap="round"/>
 
-  <!-- Small accent dot — orange-ish for visual interest like original -->
-  <circle cx="42" cy="22" r="2.2" fill="#f59e0b"/>
+  <!-- Right short vertical branch + T-end -->
+  <line x1="130" y1="84"  x2="130" y2="98" stroke="#0c1210" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="122" y1="98"  x2="138" y2="98" stroke="#0c1210" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       JUNCTION DOTS — white circles at every trace corner/end
+       ══════════════════════════════════════════════════════════════════ -->
+  <circle cx="96"  cy="80"  r="6"   fill="white"/>
+  <circle cx="96"  cy="100" r="4"   fill="white"/>
+  <circle cx="96"  cy="108" r="4.5" fill="white"/>
+  <circle cx="58"  cy="90"  r="5"   fill="white"/>
+  <circle cx="58"  cy="100" r="3.5" fill="white"/>
+  <circle cx="58"  cy="108" r="4"   fill="white"/>
+  <circle cx="140" cy="84"  r="4.5" fill="white"/>
+  <circle cx="130" cy="98"  r="3.5" fill="white"/>
+  <circle cx="122" cy="98"  r="3"   fill="white"/>
+  <circle cx="138" cy="98"  r="3"   fill="white"/>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       LARGE BLACK TERMINAL DOT — left of head (PCB endpoint)
+       ══════════════════════════════════════════════════════════════════ -->
+  <circle cx="18" cy="90" r="16" fill="#0c1210"/>
+
 </svg>

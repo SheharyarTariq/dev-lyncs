@@ -54,12 +54,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="relative w-7 h-7">
-                <div className="absolute inset-0 rounded-full bg-teal-600" />
-                <div className="absolute inset-[3px] rounded-full bg-ink-950 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-teal-600" />
-                </div>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/favicon.svg"
+                alt="AXIS Studio"
+                className="w-7 h-7"
+              />
               <span className="font-display font-600 text-[15px] tracking-tight text-cream-50">
                 AXIS Studio
               </span>

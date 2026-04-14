@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "What's your minimum project budget?",
-    a: "Our Starter package begins at £3,500. We don't take on projects below this threshold as we believe in doing every project properly.",
+    a: "Our Starter package begins at $3,500. We don't take on projects below this threshold as we believe in doing every project properly.",
   },
   {
     q: "Do you work with startups or only established companies?",

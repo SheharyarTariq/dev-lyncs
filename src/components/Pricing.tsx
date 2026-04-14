@@ -8,7 +8,7 @@ const plans = [
   {
     name: "Starter",
     tagline: "For focused projects",
-    price: "£3,500",
+    price: "$3,500",
     priceNote: "one-time",
     features: [
       "Landing page design & build",
@@ -23,7 +23,7 @@ const plans = [
   {
     name: "Growth",
     tagline: "Most popular",
-    price: "£8,500",
+    price: "$8,500",
     priceNote: "one-time",
     features: [
       "Full website design & development",
@@ -235,7 +235,7 @@ export default function Pricing() {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-center text-[12px] text-ink-800/35 mt-10"
         >
-          All projects start with a free 30-min discovery call. No obligation. VAT may apply.
+          All projects start with a free 30-min discovery call. No obligation. Taxes may apply.
         </motion.p>
       </div>
     </section>
