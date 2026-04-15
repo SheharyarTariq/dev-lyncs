@@ -59,16 +59,16 @@ export default function Navbar() {
           <a
             href="#"
             className="flex items-center gap-2.5 pl-1 group"
-            aria-label="AXIS Studio home"
+            aria-label="AlgoThink Solutions home"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/favicon.svg"
-              alt="AXIS Studio"
+              alt="AlgoThink Solutions"
               className="w-7 h-7 group-hover:scale-110 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
             />
             <span className="font-display font-600 text-[15px] tracking-tight text-ink-950">
-              AXIS Studio
+              AlgoThink Solutions
             </span>
           </a>
 

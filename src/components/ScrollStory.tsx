@@ -64,7 +64,7 @@ const ChapterStudio = memo(function ChapterStudio({ progress }: { progress: Moti
           className="text-[11px] uppercase tracking-[0.28em] font-semibold text-teal-400 mb-8"
           style={{ opacity }}
         >
-          AXIS Studio
+          AlgoThink Solutions
         </motion.p>
 
         <h2 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.92] tracking-tight text-cream-50 mb-8">
@@ -310,7 +310,7 @@ function Chapter({
     <div
       ref={wrapperRef}
       className="relative"
-      style={{ height: "175vh" }}
+      style={{ height: "250vh" }}
       id={`chapter-${chapter.id}`}
     >
       {/* Sticky viewport */}
@@ -337,7 +337,7 @@ function Chapter({
 
 export default function ScrollStory() {
   return (
-    <section className="bg-ink-950" aria-label="AXIS Studio story">
+    <section className="bg-ink-950" aria-label="AlgoThink Solutions story">
       {CHAPTERS.map((chapter, i) => (
         <Chapter key={chapter.id} chapter={chapter} index={i} />
       ))}

@@ -26,7 +26,7 @@ const links = {
   Connect: [
     "Contact us",
     "Book a call",
-    "hello@axisstudio.co",
+    "hello@algothinksolutions.com",
     "LinkedIn",
     "Dribbble",
   ],
@@ -57,11 +57,11 @@ export default function Footer() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/favicon.svg"
-                alt="AXIS Studio"
+                alt="AlgoThink Solutions"
                 className="w-7 h-7"
               />
               <span className="font-display font-600 text-[15px] tracking-tight text-cream-50">
-                AXIS Studio
+                AlgoThink Solutions
               </span>
             </div>
             <p className="text-sm leading-relaxed text-cream-50/35 max-w-[28ch] mb-6">
@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[12px] text-cream-50/25">
-            &copy; {new Date().getFullYear()} AXIS Studio Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} AlgoThink Solutions Ltd. All rights reserved.
           </p>
           <p className="text-[12px] text-cream-50/20">
             Crafted with care

@@ -253,10 +253,10 @@ export default function CTA() {
                   Prefer to reach out directly?
                 </p>
                 <a
-                  href="mailto:hello@axisstudio.co"
+                  href="mailto:hello@algothinksolutions.com"
                   className="text-[13px] text-teal-400 hover:text-teal-300 transition-colors font-medium"
                 >
-                  hello@axisstudio.co
+                  hello@algothinksolutions.com
                 </a>
               </motion.div>
             </div>
