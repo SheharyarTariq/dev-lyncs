@@ -52,7 +52,8 @@ export default function Testimonials() {
   const titleRef = useRef<HTMLDivElement>(null);
   const titleInView = useInView(titleRef, { once: true, margin: "-60px" });
 
-  const prev = () => setActiveIdx((i) => (i === 0 ? testimonials.length - 1 : i - 1));
+  const prev = () =>
+    setActiveIdx((i) => (i === 0 ? testimonials.length - 1 : i - 1));
   const next = () => setActiveIdx((i) => (i + 1) % testimonials.length);
 
   const t = testimonials[activeIdx];
@@ -89,7 +90,11 @@ export default function Testimonials() {
           <div className="p-1.5 rounded-[2.5rem] border border-ink-950/6 bg-ink-950/[0.02]">
             <div className="rounded-[calc(2.5rem-6px)] bg-white shadow-soft-lg p-10 md:p-14">
               {/* Quotes icon */}
-              <Quotes size={32} weight="fill" className="text-teal-600/25 mb-6" />
+              <Quotes
+                size={32}
+                weight="fill"
+                className="text-teal-600/25 mb-6"
+              />
 
               {/* Quote text */}
               <AnimatePresence mode="wait">
@@ -122,7 +127,9 @@ export default function Testimonials() {
                       className="w-10 h-10 rounded-full object-cover border border-ink-950/8"
                     />
                     <div>
-                      <p className="text-sm font-semibold text-ink-950">{t.author}</p>
+                      <p className="text-sm font-semibold text-ink-950">
+                        {t.author}
+                      </p>
                       <p className="text-[11px] text-ink-800/45">{t.role}</p>
                     </div>
                   </div>
@@ -130,7 +137,13 @@ export default function Testimonials() {
                   {/* Stars */}
                   <div className="flex gap-1">
                     {Array.from({ length: t.rating }).map((_, i) => (
-                      <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="#0D9488">
+                      <svg
+                        key={i}
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="#0D9488"
+                      >
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}

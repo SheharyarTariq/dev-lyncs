@@ -9,7 +9,11 @@ const companies = [
   { name: "Vanta Group", weight: "font-semibold", tracking: "tracking-normal" },
   { name: "Luma Creative", weight: "font-medium", tracking: "tracking-tight" },
   { name: "Crest Finance", weight: "font-bold", tracking: "tracking-tight" },
-  { name: "Novo Collective", weight: "font-semibold", tracking: "tracking-tighter" },
+  {
+    name: "Novo Collective",
+    weight: "font-semibold",
+    tracking: "tracking-tighter",
+  },
   { name: "Arbor Health", weight: "font-medium", tracking: "tracking-normal" },
   { name: "Summit IO", weight: "font-bold", tracking: "tracking-tight" },
 ];
@@ -23,10 +27,7 @@ export default function ClientLogos() {
 
   return (
     <section className="py-16 md:py-20 bg-cream-50">
-      <div
-        ref={ref}
-        className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20"
-      >
+      <div ref={ref} className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Eyebrow + heading */}
         <div className="text-center mb-12">
           <motion.div

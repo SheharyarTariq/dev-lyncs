@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { ArrowRight } from "@phosphor-icons/react";
 
 const navLinks = [
@@ -49,9 +54,10 @@ export default function Navbar() {
           className={`
             flex items-center justify-between gap-6 px-4 py-2.5 rounded-full
             border transition-all duration-500
-            ${scrolled
-              ? "bg-cream-50/95 border-ink-950/8 shadow-soft"
-              : "bg-cream-50/70 border-ink-950/6"
+            ${
+              scrolled
+                ? "bg-cream-50/95 border-ink-950/8 shadow-soft"
+                : "bg-cream-50/70 border-ink-950/6"
             }
           `}
         >
@@ -128,7 +134,10 @@ export default function Navbar() {
             className="fixed inset-0 z-40 md:hidden backdrop-blur-2xl bg-cream-50/90"
             onClick={() => setMenuOpen(false)}
           >
-            <div className="flex flex-col justify-center items-center h-full gap-2 px-8" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="flex flex-col justify-center items-center h-full gap-2 px-8"
+              onClick={(e) => e.stopPropagation()}
+            >
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.label}
@@ -153,7 +162,11 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 12 }}
-                transition={{ duration: 0.5, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.38,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="mt-6 w-full text-center py-4 rounded-full bg-ink-950 text-cream-50 text-lg font-semibold"
               >
                 Start a Project

@@ -190,7 +190,11 @@ export default function CTA() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.2,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-teal-600/30 bg-teal-600/15 mb-6"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse-soft" />
@@ -202,7 +206,11 @@ export default function CTA() {
               <motion.h2
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.9,
+                  delay: 0.3,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="font-display text-[clamp(2.25rem,4vw,3.5rem)] leading-tight tracking-tight text-cream-50 mb-5"
               >
                 Ready to build
@@ -213,7 +221,11 @@ export default function CTA() {
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.45,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="text-sm leading-relaxed text-cream-50/50 max-w-[38ch] mb-8"
               >
                 Tell us about your project. We read every submission personally
@@ -224,7 +236,11 @@ export default function CTA() {
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.55,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="space-y-2.5"
               >
                 {[
@@ -265,7 +281,11 @@ export default function CTA() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.9,
+                delay: 0.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
             >
               <AnimatePresence mode="wait">
                 {submitted ? (

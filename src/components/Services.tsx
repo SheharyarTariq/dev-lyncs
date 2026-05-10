@@ -51,7 +51,13 @@ const services = [
   },
 ];
 
-function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+function ServiceCard({
+  service,
+  index,
+}: {
+  service: (typeof services)[0];
+  index: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -60,7 +66,11 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.9, delay: (index % 2) * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      transition={{
+        duration: 0.9,
+        delay: (index % 2) * 0.1,
+        ease: [0.16, 1, 0.3, 1],
+      }}
       className={`group ${service.span}`}
     >
       {/* Double-bezel card */}
@@ -138,7 +148,11 @@ export default function Services() {
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               animate={titleInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="font-display text-[clamp(2.25rem,4vw,3.5rem)] leading-tight tracking-tight text-ink-950"
             >
               End-to-end creative

@@ -35,11 +35,11 @@ const config: Config = {
       animation: {
         "float-slow": "floatSlow 8s ease-in-out infinite",
         "float-medium": "floatMedium 6s ease-in-out infinite",
-        "marquee": "marquee 30s linear infinite",
+        marquee: "marquee 30s linear infinite",
         "marquee-reverse": "marqueeReverse 30s linear infinite",
         "spin-slow": "spin 20s linear infinite",
         "pulse-soft": "pulseSoft 3s ease-in-out infinite",
-        "shimmer": "shimmer 2.5s linear infinite",
+        shimmer: "shimmer 2.5s linear infinite",
       },
       keyframes: {
         floatSlow: {
@@ -68,22 +68,24 @@ const config: Config = {
         },
       },
       boxShadow: {
-        "soft": "0 4px 20px -2px rgba(0,0,0,0.06), 0 2px 8px -1px rgba(0,0,0,0.04)",
-        "soft-lg": "0 20px 60px -10px rgba(0,0,0,0.08), 0 8px 24px -4px rgba(0,0,0,0.04)",
-        "teal": "0 8px 32px -4px rgba(13,148,136,0.25)",
+        soft: "0 4px 20px -2px rgba(0,0,0,0.06), 0 2px 8px -1px rgba(0,0,0,0.04)",
+        "soft-lg":
+          "0 20px 60px -10px rgba(0,0,0,0.08), 0 8px 24px -4px rgba(0,0,0,0.04)",
+        teal: "0 8px 32px -4px rgba(13,148,136,0.25)",
         "inner-light": "inset 0 1px 1px rgba(255,255,255,0.9)",
         "inner-subtle": "inset 0 1px 0 rgba(255,255,255,0.6)",
       },
       backdropBlur: {
-        "xs": "2px",
+        xs: "2px",
       },
       transitionTimingFunction: {
-        "spring": "cubic-bezier(0.32, 0.72, 0, 1)",
-        "expo": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "back": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        spring: "cubic-bezier(0.32, 0.72, 0, 1)",
+        expo: "cubic-bezier(0.16, 1, 0.3, 1)",
+        back: "cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
       backgroundImage: {
-        "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
+        noise:
+          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E\")",
       },
     },
   },

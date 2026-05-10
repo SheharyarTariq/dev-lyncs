@@ -115,10 +115,7 @@ export default function Team() {
 
   return (
     <section id="team" className="bg-cream-50 py-24 md:py-32">
-      <div
-        ref={ref}
-        className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20"
-      >
+      <div ref={ref} className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Eyebrow */}
         <motion.div
           initial={HIDDEN}
@@ -147,8 +144,7 @@ export default function Team() {
           className="font-display text-ink-950 leading-[1.05] tracking-tight mb-4"
           style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
         >
-          Senior talent,{" "}
-          <span className="block">hands-on always.</span>
+          Senior talent, <span className="block">hands-on always.</span>
         </motion.h2>
 
         {/* Sub */}

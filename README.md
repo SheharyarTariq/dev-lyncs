@@ -3,6 +3,7 @@
 A premium $20k-quality Next.js website for LaundryFree UK, built with the [taste-skill](https://github.com/Leonxlnx/taste-skill) design system.
 
 ## Tech Stack
+
 - **Next.js 14** (App Router)
 - **TypeScript**
 - **Tailwind CSS v3**
@@ -12,6 +13,7 @@ A premium $20k-quality Next.js website for LaundryFree UK, built with the [taste
 - **Plus Jakarta Sans** + **Fraunces** — premium font pairing
 
 ## Design Philosophy (taste-skill / soft-skill)
+
 - Editorial Luxury vibe archetype (warm cream palette)
 - Asymmetric bento grid layout
 - Double-bezel "Doppelrand" nested card architecture
@@ -39,6 +41,7 @@ npm start
 ```
 
 ## Sections
+
 1. **Navbar** — Floating pill, morphing hamburger, staggered mobile menu
 2. **Hero** — Three.js bubble particles, asymmetric layout, magnetic CTA, floating cards
 3. **Marquee** — Dark scrolling feature band

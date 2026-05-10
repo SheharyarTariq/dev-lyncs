@@ -70,7 +70,11 @@ function PricingCard({
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.85, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
+      transition={{
+        duration: 0.85,
+        delay: index * 0.12,
+        ease: [0.16, 1, 0.3, 1],
+      }}
       className={`relative flex flex-col ${plan.highlighted ? "lg:-mt-4 lg:-mb-4" : ""}`}
     >
       {plan.highlighted && (
@@ -84,17 +88,19 @@ function PricingCard({
       {/* Double-bezel */}
       <div
         className={`p-1 rounded-[2.5rem] h-full flex flex-col transition-shadow duration-500 hover:shadow-soft-lg
-          ${plan.highlighted
-            ? "bg-ink-950 border border-teal-600/30"
-            : "bg-ink-950/[0.02] border border-ink-950/6"
+          ${
+            plan.highlighted
+              ? "bg-ink-950 border border-teal-600/30"
+              : "bg-ink-950/[0.02] border border-ink-950/6"
           }
         `}
       >
         <div
           className={`rounded-[calc(2.5rem-4px)] p-7 flex flex-col flex-1
-            ${plan.highlighted
-              ? "bg-ink-950 shadow-[inset_0_1px_1px_rgba(255,255,255,0.04)]"
-              : "bg-white shadow-soft"
+            ${
+              plan.highlighted
+                ? "bg-ink-950 shadow-[inset_0_1px_1px_rgba(255,255,255,0.04)]"
+                : "bg-white shadow-soft"
             }
           `}
         >
@@ -164,9 +170,10 @@ function PricingCard({
           <a
             href="#"
             className={`group w-full flex items-center justify-center gap-2 py-3 px-5 rounded-full text-sm font-semibold transition-all duration-300 active:scale-[0.98]
-              ${plan.highlighted
-                ? "bg-teal-600 text-white hover:bg-teal-500 shadow-teal"
-                : "bg-ink-950 text-cream-50 hover:bg-ink-800"
+              ${
+                plan.highlighted
+                  ? "bg-teal-600 text-white hover:bg-teal-500 shadow-teal"
+                  : "bg-ink-950 text-cream-50 hover:bg-ink-800"
               }
             `}
           >
@@ -235,7 +242,8 @@ export default function Pricing() {
           transition={{ duration: 1, delay: 0.6 }}
           className="text-center text-[12px] text-ink-800/35 mt-10"
         >
-          All projects start with a free 30-min discovery call. No obligation. Taxes may apply.
+          All projects start with a free 30-min discovery call. No obligation.
+          Taxes may apply.
         </motion.p>
       </div>
     </section>
