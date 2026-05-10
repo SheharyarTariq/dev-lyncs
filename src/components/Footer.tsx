@@ -16,13 +16,7 @@ const links = {
     "Digital Marketing",
     "View all projects",
   ],
-  Company: [
-    "About us",
-    "Our process",
-    "Careers",
-    "Blog",
-    "Press",
-  ],
+  Company: ["About us", "Our process", "Careers", "Blog", "Press"],
   Connect: [
     "Contact us",
     "Book a call",
@@ -65,7 +59,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-cream-50/35 max-w-[28ch] mb-6">
-              A full-service creative studio crafting brands, products, and campaigns for ambitious companies.
+              A full-service creative studio crafting brands, products, and
+              campaigns for ambitious companies.
             </p>
 
             {/* Social icons */}
@@ -110,11 +105,10 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[12px] text-cream-50/25">
-            &copy; {new Date().getFullYear()} AlgoThink Solutions Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} AlgoThink Solutions Ltd. All
+            rights reserved.
           </p>
-          <p className="text-[12px] text-cream-50/20">
-            Crafted with care
-          </p>
+          <p className="text-[12px] text-cream-50/20">Crafted with care</p>
         </div>
       </div>
     </footer>

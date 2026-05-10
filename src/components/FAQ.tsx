@@ -79,7 +79,11 @@ export default function FAQ() {
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="font-display text-[clamp(2.25rem,4vw,3.25rem)] leading-tight tracking-tight text-ink-950 mb-5"
             >
               Everything you need
@@ -91,11 +95,17 @@ export default function FAQ() {
             <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.16,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="text-sm text-ink-800/55 leading-relaxed mb-6 max-w-xs"
             >
               Can&apos;t find your answer? Drop us a line at{" "}
-              <span className="text-ink-950/70">hello@algothinksolutions.com</span>
+              <span className="text-ink-950/70">
+                hello@algothinksolutions.com
+              </span>
             </motion.p>
 
             {/* CTA link */}
@@ -103,7 +113,11 @@ export default function FAQ() {
               href="#contact"
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.22,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="inline-flex items-center text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors duration-200"
             >
               Ask a question →
@@ -142,7 +156,9 @@ export default function FAQ() {
 
                   <span
                     className={`flex-shrink-0 transition-colors duration-200 ${
-                      openIndex === i ? "text-teal-600" : "text-ink-800/40 group-hover:text-teal-600"
+                      openIndex === i
+                        ? "text-teal-600"
+                        : "text-ink-800/40 group-hover:text-teal-600"
                     }`}
                   >
                     {openIndex === i ? (

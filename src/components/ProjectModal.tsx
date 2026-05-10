@@ -31,15 +31,18 @@ export default function ProjectModal({ project, onClose }: Props) {
     setSlide(0);
     if (project) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [project]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (!project) return;
       if (e.key === "Escape") onClose();
-      if (e.key === "ArrowRight") setSlide(s => Math.min(s + 1, project.screenshots.length - 1));
-      if (e.key === "ArrowLeft") setSlide(s => Math.max(s - 1, 0));
+      if (e.key === "ArrowRight")
+        setSlide((s) => Math.min(s + 1, project.screenshots.length - 1));
+      if (e.key === "ArrowLeft") setSlide((s) => Math.max(s - 1, 0));
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
@@ -55,10 +58,15 @@ export default function ProjectModal({ project, onClose }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center"
-          onClick={(e) => { if (e.target === overlayRef.current) onClose(); }}
+          onClick={(e) => {
+            if (e.target === overlayRef.current) onClose();
+          }}
         >
           {/* Backdrop */}
-          <div className="absolute inset-0 bg-ink-950/80 backdrop-blur-sm" onClick={onClose} />
+          <div
+            className="absolute inset-0 bg-ink-950/80 backdrop-blur-sm"
+            onClick={onClose}
+          />
 
           {/* Panel */}
           <motion.div
@@ -98,18 +106,30 @@ export default function ProjectModal({ project, onClose }: Props) {
                 {project.screenshots.length > 1 && (
                   <>
                     <button
-                      onClick={() => setSlide(s => Math.max(s - 1, 0))}
+                      onClick={() => setSlide((s) => Math.max(s - 1, 0))}
                       disabled={slide === 0}
                       className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow disabled:opacity-30 hover:bg-white transition-all"
                     >
-                      <CaretLeft size={14} weight="bold" className="text-ink-950" />
+                      <CaretLeft
+                        size={14}
+                        weight="bold"
+                        className="text-ink-950"
+                      />
                     </button>
                     <button
-                      onClick={() => setSlide(s => Math.min(s + 1, project.screenshots.length - 1))}
+                      onClick={() =>
+                        setSlide((s) =>
+                          Math.min(s + 1, project.screenshots.length - 1),
+                        )
+                      }
                       disabled={slide === project.screenshots.length - 1}
                       className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow disabled:opacity-30 hover:bg-white transition-all"
                     >
-                      <CaretRight size={14} weight="bold" className="text-ink-950" />
+                      <CaretRight
+                        size={14}
+                        weight="bold"
+                        className="text-ink-950"
+                      />
                     </button>
                     {/* Dots */}
                     <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
@@ -142,7 +162,11 @@ export default function ProjectModal({ project, onClose }: Props) {
                       className={`flex-shrink-0 w-16 h-10 rounded-lg overflow-hidden border-2 transition-all ${i === slide ? "border-teal-500 opacity-100" : "border-transparent opacity-50 hover:opacity-75"}`}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={src} alt="" className="w-full h-full object-cover object-top" />
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-cover object-top"
+                      />
                     </button>
                   ))}
                 </div>
@@ -152,9 +176,15 @@ export default function ProjectModal({ project, onClose }: Props) {
               <div className="px-6 sm:px-10 py-8">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div>
-                    <p className="text-[11px] text-ink-800/50 uppercase tracking-widest mb-1">{project.domain}</p>
-                    <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink-950 leading-tight">{project.title}</h2>
-                    <p className="mt-2 text-ink-800/60 text-sm">{project.tagline}</p>
+                    <p className="text-[11px] text-ink-800/50 uppercase tracking-widest mb-1">
+                      {project.domain}
+                    </p>
+                    <h2 className="font-display text-3xl sm:text-4xl font-semibold text-ink-950 leading-tight">
+                      {project.title}
+                    </h2>
+                    <p className="mt-2 text-ink-800/60 text-sm">
+                      {project.tagline}
+                    </p>
                   </div>
                   <a
                     href={project.url}
@@ -171,7 +201,10 @@ export default function ProjectModal({ project, onClose }: Props) {
                 {/* Tech stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((t) => (
-                    <span key={t} className="px-3 py-1 rounded-full bg-ink-950/6 text-[11px] font-medium text-ink-800/70 uppercase tracking-wide">
+                    <span
+                      key={t}
+                      className="px-3 py-1 rounded-full bg-ink-950/6 text-[11px] font-medium text-ink-800/70 uppercase tracking-wide"
+                    >
                       {t}
                     </span>
                   ))}

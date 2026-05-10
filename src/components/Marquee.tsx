@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Palette, Code, MegaphoneSimple, Pen, Lightbulb, DeviceMobile, Rocket, ChartBar, Star, Browsers } from "@phosphor-icons/react";
+import {
+  Palette,
+  Code,
+  MegaphoneSimple,
+  Pen,
+  Lightbulb,
+  DeviceMobile,
+  Rocket,
+  ChartBar,
+  Star,
+  Browsers,
+} from "@phosphor-icons/react";
 
 const items = [
   { icon: Palette, text: "Brand Identity" },
@@ -35,8 +46,14 @@ export default function Marquee() {
             key={i}
             className="inline-flex items-center gap-3 mx-8 text-cream-50/80 flex-shrink-0"
           >
-            <Icon size={14} weight="fill" className="text-teal-400 flex-shrink-0" />
-            <span className="text-[13px] font-medium tracking-wide uppercase">{text}</span>
+            <Icon
+              size={14}
+              weight="fill"
+              className="text-teal-400 flex-shrink-0"
+            />
+            <span className="text-[13px] font-medium tracking-wide uppercase">
+              {text}
+            </span>
             <span className="text-cream-50/20 ml-6">—</span>
           </div>
         ))}

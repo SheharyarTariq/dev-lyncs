@@ -44,13 +44,7 @@ const steps = [
   },
 ];
 
-function StepCard({
-  step,
-  index,
-}: {
-  step: (typeof steps)[0];
-  index: number;
-}) {
+function StepCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const Icon = step.icon;

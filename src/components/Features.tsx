@@ -80,9 +80,10 @@ function FeatureCard({
       <div
         className={`
           p-1 rounded-[2.5rem] h-full
-          ${feature.dark
-            ? "bg-ink-950/5 border border-ink-950/8"
-            : "bg-ink-950/[0.02] border border-ink-950/6"
+          ${
+            feature.dark
+              ? "bg-ink-950/5 border border-ink-950/8"
+              : "bg-ink-950/[0.02] border border-ink-950/6"
           }
           transition-shadow duration-500 group-hover:shadow-soft-lg
         `}
@@ -165,7 +166,9 @@ function ReachCard() {
                 globally capable
               </h3>
               <p className="text-sm leading-relaxed text-ink-800/55 mb-6 max-w-[40ch]">
-                We work with clients across the UK, Europe, the Middle East, and beyond. Timezone-friendly processes and async collaboration mean location is never a barrier.
+                We work with clients across the UK, Europe, the Middle East, and
+                beyond. Timezone-friendly processes and async collaboration mean
+                location is never a barrier.
               </p>
               <a
                 href="#contact"
@@ -205,7 +208,10 @@ function ReachCard() {
                 >
                   <div className="relative -translate-x-1/2 -translate-y-1/2">
                     <div className="w-2.5 h-2.5 rounded-full bg-teal-600 border-2 border-white shadow-sm" />
-                    <div className="absolute inset-0 rounded-full bg-teal-600/30 animate-ping" style={{ animationDelay: `${i * 200}ms` }} />
+                    <div
+                      className="absolute inset-0 rounded-full bg-teal-600/30 animate-ping"
+                      style={{ animationDelay: `${i * 200}ms` }}
+                    />
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-medium text-ink-800/60 whitespace-nowrap">
                       {region.name}
                     </span>
@@ -247,7 +253,9 @@ export default function Features() {
           >
             The way we work
             <br />
-            <em className="not-italic text-ink-800/45">makes the difference.</em>
+            <em className="not-italic text-ink-800/45">
+              makes the difference.
+            </em>
           </motion.h2>
         </div>
 

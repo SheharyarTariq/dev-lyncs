@@ -11,18 +11,15 @@
  */
 
 import { memo, useRef, useEffect } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WILL_CHANGE_TO: React.CSSProperties = { willChange: "transform, opacity" };
+const WILL_CHANGE_TO: React.CSSProperties = {
+  willChange: "transform, opacity",
+};
 const WILL_CHANGE_T: React.CSSProperties = { willChange: "transform" };
 
 // ── GSAP Particle Canvas ─────────────────────────────────────────────────────
@@ -37,7 +34,11 @@ interface Particle {
   color: string;
 }
 
-function ParticleCanvas({ sectionRef }: { sectionRef: React.RefObject<HTMLElement | null> }) {
+function ParticleCanvas({
+  sectionRef,
+}: {
+  sectionRef: React.RefObject<HTMLElement | null>;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -143,12 +144,31 @@ function ParticleCanvas({ sectionRef }: { sectionRef: React.RefObject<HTMLElemen
 
 // ── GSAP Horizontal Word Ticker ───────────────────────────────────────────────
 const TICKER_WORDS = [
-  "Brand Identity", "·", "UI/UX Design", "·", "Web Development", "·",
-  "Digital Marketing", "·", "Strategy", "·", "Growth", "·",
-  "React", "·", "Next.js", "·", "AlgoThink", "·",
+  "Brand Identity",
+  "·",
+  "UI/UX Design",
+  "·",
+  "Web Development",
+  "·",
+  "Digital Marketing",
+  "·",
+  "Strategy",
+  "·",
+  "Growth",
+  "·",
+  "React",
+  "·",
+  "Next.js",
+  "·",
+  "AlgoThink",
+  "·",
 ];
 
-function WordTicker({ sectionRef }: { sectionRef: React.RefObject<HTMLElement | null> }) {
+function WordTicker({
+  sectionRef,
+}: {
+  sectionRef: React.RefObject<HTMLElement | null>;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -190,12 +210,17 @@ function WordTicker({ sectionRef }: { sectionRef: React.RefObject<HTMLElement | 
       className="absolute bottom-0 left-0 w-full z-20 overflow-hidden pointer-events-none"
       style={{
         borderTop: "1px solid rgba(255,255,255,0.05)",
-        background: "linear-gradient(to right, rgba(10,10,15,0.9), rgba(10,10,15,0.6), rgba(10,10,15,0.9))",
+        background:
+          "linear-gradient(to right, rgba(10,10,15,0.9), rgba(10,10,15,0.6), rgba(10,10,15,0.9))",
         padding: "10px 0",
       }}
       aria-hidden="true"
     >
-      <div ref={trackRef} className="flex gap-8 whitespace-nowrap will-change-transform" style={{ width: "200%" }}>
+      <div
+        ref={trackRef}
+        className="flex gap-8 whitespace-nowrap will-change-transform"
+        style={{ width: "200%" }}
+      >
         {doubled.map((word, i) => (
           <span
             key={i}
@@ -222,7 +247,11 @@ const FLOAT_WORDS = [
   { text: "future", x: "65%", y: "72%" },
 ];
 
-function FloatingWords({ sectionRef }: { sectionRef: React.RefObject<HTMLElement | null> }) {
+function FloatingWords({
+  sectionRef,
+}: {
+  sectionRef: React.RefObject<HTMLElement | null>;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -230,7 +259,9 @@ function FloatingWords({ sectionRef }: { sectionRef: React.RefObject<HTMLElement
     const section = sectionRef.current;
     if (!container || !section) return;
 
-    const items = gsap.utils.toArray<HTMLElement>(container.querySelectorAll(".float-word"));
+    const items = gsap.utils.toArray<HTMLElement>(
+      container.querySelectorAll(".float-word"),
+    );
 
     // Each word gets its own looping float animation staggered
     items.forEach((el, i) => {
@@ -244,7 +275,7 @@ function FloatingWords({ sectionRef }: { sectionRef: React.RefObject<HTMLElement
           yoyo: true,
           repeat: -1,
           delay: i * 0.3,
-        }
+        },
       );
     });
 
@@ -288,13 +319,21 @@ function FloatingWords({ sectionRef }: { sectionRef: React.RefObject<HTMLElement
 }
 
 // ── Chapter 1 — "The Studio" ─────────────────────────────────────────────────
-const ChapterStudio = memo(function ChapterStudio({ progress }: { progress: MotionValue<number> }) {
+const ChapterStudio = memo(function ChapterStudio({
+  progress,
+}: {
+  progress: MotionValue<number>;
+}) {
   const opacity = useTransform(progress, [0, 0.12, 0.72, 0.88], [0, 1, 1, 0]);
   const y = useTransform(progress, [0, 0.12, 0.72, 0.88], [50, 0, 0, -50]);
   const scale = useTransform(progress, [0, 0.12], [0.94, 1]);
 
   const orbScale = useTransform(progress, [0, 0.3], [0.75, 1.15]);
-  const orbOpacity = useTransform(progress, [0, 0.12, 0.72, 0.88], [0, 0.7, 0.7, 0]);
+  const orbOpacity = useTransform(
+    progress,
+    [0, 0.12, 0.72, 0.88],
+    [0, 0.7, 0.7, 0],
+  );
 
   const line1Width = useTransform(progress, [0.04, 0.22], ["0%", "100%"]);
   const line2Width = useTransform(progress, [0.08, 0.26], ["0%", "100%"]);
@@ -331,23 +370,35 @@ const ChapterStudio = memo(function ChapterStudio({ progress }: { progress: Moti
 
         <h2 className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.92] tracking-tight text-cream-50 mb-8">
           <span className="block overflow-hidden">
-            <motion.span className="block" style={{ y: headY1, ...WILL_CHANGE_T }}>
+            <motion.span
+              className="block"
+              style={{ y: headY1, ...WILL_CHANGE_T }}
+            >
               Where ideas
             </motion.span>
           </span>
           <span className="block overflow-hidden">
-            <motion.span className="block text-teal-400" style={{ y: headY2, ...WILL_CHANGE_T }}>
+            <motion.span
+              className="block text-teal-400"
+              style={{ y: headY2, ...WILL_CHANGE_T }}
+            >
               become brands.
             </motion.span>
           </span>
         </h2>
 
         <div className="flex items-center justify-center gap-4 mt-12">
-          <motion.div className="h-px bg-white/20" style={{ width: line1Width }} />
+          <motion.div
+            className="h-px bg-white/20"
+            style={{ width: line1Width }}
+          />
           <span className="text-white/30 text-xs tracking-widest whitespace-nowrap">
             EST. 2016
           </span>
-          <motion.div className="h-px bg-white/20" style={{ width: line2Width }} />
+          <motion.div
+            className="h-px bg-white/20"
+            style={{ width: line2Width }}
+          />
         </div>
       </motion.div>
     </div>
@@ -373,10 +424,21 @@ function StatItem({
   value: string;
   label: string;
 }) {
-  const opacity = useTransform(progress, [0.08 + index * 0.04, 0.2 + index * 0.04], [0, 1]);
-  const y = useTransform(progress, [0.08 + index * 0.04, 0.2 + index * 0.04], [40, 0]);
+  const opacity = useTransform(
+    progress,
+    [0.08 + index * 0.04, 0.2 + index * 0.04],
+    [0, 1],
+  );
+  const y = useTransform(
+    progress,
+    [0.08 + index * 0.04, 0.2 + index * 0.04],
+    [40, 0],
+  );
   return (
-    <motion.div style={{ opacity, y, ...WILL_CHANGE_TO }} className="text-center">
+    <motion.div
+      style={{ opacity, y, ...WILL_CHANGE_TO }}
+      className="text-center"
+    >
       <p className="font-display text-[clamp(3rem,6vw,5.5rem)] leading-none tracking-tight text-cream-50 mb-3">
         {value}
       </p>
@@ -385,7 +447,11 @@ function StatItem({
   );
 }
 
-const ChapterNumbers = memo(function ChapterNumbers({ progress }: { progress: MotionValue<number> }) {
+const ChapterNumbers = memo(function ChapterNumbers({
+  progress,
+}: {
+  progress: MotionValue<number>;
+}) {
   const opacity = useTransform(progress, [0, 0.12, 0.78, 0.92], [0, 1, 1, 0]);
   const y = useTransform(progress, [0, 0.12, 0.78, 0.92], [50, 0, 0, -50]);
 
@@ -426,8 +492,16 @@ const ChapterNumbers = memo(function ChapterNumbers({ progress }: { progress: Mo
 
 // ── Chapter 3 — "The Services" ───────────────────────────────────────────────
 const SERVICES = [
-  { n: "01", name: "Brand Identity", desc: "Strategy · Logo · Typography · Guidelines" },
-  { n: "02", name: "Web & App Design", desc: "UI/UX · Prototypes · Design Systems" },
+  {
+    n: "01",
+    name: "Brand Identity",
+    desc: "Strategy · Logo · Typography · Guidelines",
+  },
+  {
+    n: "02",
+    name: "Web & App Design",
+    desc: "UI/UX · Prototypes · Design Systems",
+  },
   { n: "03", name: "Development", desc: "Next.js · React · Full-stack" },
   { n: "04", name: "Digital Marketing", desc: "SEO · Campaigns · Growth" },
 ] as const;
@@ -445,8 +519,16 @@ function ServiceRow({
   name: string;
   desc: string;
 }) {
-  const opacity = useTransform(progress, [0.06 + index * 0.05, 0.18 + index * 0.05], [0, 1]);
-  const x = useTransform(progress, [0.06 + index * 0.05, 0.18 + index * 0.05], [-40, 0]);
+  const opacity = useTransform(
+    progress,
+    [0.06 + index * 0.05, 0.18 + index * 0.05],
+    [0, 1],
+  );
+  const x = useTransform(
+    progress,
+    [0.06 + index * 0.05, 0.18 + index * 0.05],
+    [-40, 0],
+  );
   return (
     <motion.div
       style={{ opacity, x, ...WILL_CHANGE_TO }}
@@ -458,12 +540,18 @@ function ServiceRow({
           {name}
         </span>
       </div>
-      <span className="text-[13px] text-cream-50/35 hidden md:block">{desc}</span>
+      <span className="text-[13px] text-cream-50/35 hidden md:block">
+        {desc}
+      </span>
     </motion.div>
   );
 }
 
-const ChapterServices = memo(function ChapterServices({ progress }: { progress: MotionValue<number> }) {
+const ChapterServices = memo(function ChapterServices({
+  progress,
+}: {
+  progress: MotionValue<number>;
+}) {
   const opacity = useTransform(progress, [0, 0.12, 0.82, 0.96], [0, 1, 1, 0]);
   const y = useTransform(progress, [0, 0.12, 0.82, 0.96], [50, 0, 0, -50]);
 
@@ -495,7 +583,11 @@ const ChapterServices = memo(function ChapterServices({ progress }: { progress: 
 });
 
 // ── Chapter 4 — "The CTA" ────────────────────────────────────────────────────
-const ChapterCTA = memo(function ChapterCTA({ progress }: { progress: MotionValue<number> }) {
+const ChapterCTA = memo(function ChapterCTA({
+  progress,
+}: {
+  progress: MotionValue<number>;
+}) {
   const opacity = useTransform(progress, [0, 0.18, 1], [0, 1, 1]);
   const y = useTransform(progress, [0, 0.18], [50, 0]);
   const buttonScale = useTransform(progress, [0.28, 0.48], [0.85, 1]);
@@ -520,7 +612,13 @@ const ChapterCTA = memo(function ChapterCTA({ progress }: { progress: MotionValu
           <span className="block text-teal-400">something great.</span>
         </h2>
 
-        <motion.div style={{ scale: buttonScale, opacity: buttonOpacity, ...WILL_CHANGE_TO }}>
+        <motion.div
+          style={{
+            scale: buttonScale,
+            opacity: buttonOpacity,
+            ...WILL_CHANGE_TO,
+          }}
+        >
           <a
             href="#contact"
             className="inline-flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-teal-600 text-white text-sm font-semibold hover:bg-teal-500 transition-colors duration-300 shadow-teal mt-4"
@@ -528,7 +626,13 @@ const ChapterCTA = memo(function ChapterCTA({ progress }: { progress: MotionValu
             Start a project
             <span className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2.5 6.5h8M6.5 2.5l4 4-4 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path
+                  d="M2.5 6.5h8M6.5 2.5l4 4-4 4"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </span>
           </a>
@@ -564,7 +668,11 @@ function Chapter({
     layoutEffect: false,
   });
 
-  const labelOpacity = useTransform(scrollYProgress, [0, 0.05, 0.9, 1], [0, 1, 1, 0]);
+  const labelOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.9, 1],
+    [0, 1, 1, 0],
+  );
   const Component = chapter.component;
 
   return (
@@ -589,7 +697,8 @@ function Chapter({
           className="absolute bottom-12 right-8 text-[10px] uppercase tracking-[0.2em] text-cream-50/20 font-semibold z-30"
           style={{ opacity: labelOpacity }}
         >
-          {String(index + 1).padStart(2, "0")} / {CHAPTERS.length.toString().padStart(2, "0")} — {chapter.label}
+          {String(index + 1).padStart(2, "0")} /{" "}
+          {CHAPTERS.length.toString().padStart(2, "0")} — {chapter.label}
         </motion.div>
       </div>
     </div>
@@ -600,7 +709,11 @@ export default function ScrollStory() {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section ref={sectionRef} className="bg-ink-950 relative" aria-label="AlgoThink Solutions story">
+    <section
+      ref={sectionRef}
+      className="bg-ink-950 relative"
+      aria-label="AlgoThink Solutions story"
+    >
       {/* GSAP canvas — floats across the entire section */}
       <ParticleCanvas sectionRef={sectionRef} />
 

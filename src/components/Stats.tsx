@@ -5,7 +5,13 @@ import { motion, useInView } from "framer-motion";
 
 const stats = [
   { value: 120, suffix: "+", label: "Projects delivered", prefix: "" },
-  { value: 98, suffix: "%", label: "Client satisfaction", prefix: "", decimals: 0 },
+  {
+    value: 98,
+    suffix: "%",
+    label: "Client satisfaction",
+    prefix: "",
+    decimals: 0,
+  },
   { value: 8, suffix: " yrs", label: "Years in business", prefix: "" },
   { value: 60, suffix: "+", label: "Brands helped", prefix: "" },
 ];
@@ -46,11 +52,14 @@ function CountUp({
     return () => clearInterval(timer);
   }, [target, active]);
 
-  const display = decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString();
+  const display =
+    decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString();
 
   return (
     <span>
-      {prefix}{display}{suffix}
+      {prefix}
+      {display}
+      {suffix}
     </span>
   );
 }
@@ -68,7 +77,11 @@ export default function Stats() {
               key={stat.label}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: i * 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="px-8 py-10 first:pl-0 last:pr-0"
             >
               <div className="font-display text-[clamp(2rem,4vw,3.25rem)] font-light text-cream-50 tabular-nums leading-none mb-2">

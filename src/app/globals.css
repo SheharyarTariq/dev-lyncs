@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --cream: #FDFBF7;
-  --ink: #0A0A0F;
-  --teal: #0D9488;
-  --teal-light: #14B8A6;
+  --cream: #fdfbf7;
+  --ink: #0a0a0f;
+  --teal: #0d9488;
+  --teal-light: #14b8a6;
 }
 
 html {
@@ -59,9 +59,10 @@ body::before {
 .fade-up {
   opacity: 0;
   transform: translateY(40px) blur(4px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fade-up.visible {
   opacity: 1;
